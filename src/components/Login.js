@@ -1,29 +1,44 @@
 import React from 'react';
 import { SafeAreaView, View, StyleSheet } from 'react-native';
 
-import GenericStyles from "../styles/GenericStyles";
-import Colors from "../common/Colors";
+import GenericStyles from '../styles/GenericStyles';
+import Colors from '../common/Colors';
 
-import Screens from "../common/Screens";
-import ErrorBoundary from "../common/ErrorBoundary";
-import {CustomImageButton, CustomText} from "./lib";
-import {googleIcon} from "../images";
+import Screens from '../common/Screens';
+import ErrorBoundary from '../common/ErrorBoundary';
+import { CustomImageButton, CustomText } from './lib';
+import { googleIcon } from '../images';
 
 const Login = () => {
-
-  const onGoogleLoginPress = () => {
-
-  };
+  const onGoogleLoginPress = () => {};
 
   return (
     <SafeAreaView style={styles.primaryBackgroundContainer}>
       <ErrorBoundary screenName={Screens.Login}>
-        <View style={[GenericStyles.fill, GenericStyles.p16, styles.justifyContentCenter]}>
-          <CustomText style={[GenericStyles.fontSize28, GenericStyles.whiteText, GenericStyles.centerAlignedText]}>Self Chat</CustomText>
+        <View
+          style={[
+            GenericStyles.fill,
+            GenericStyles.p16,
+            styles.justifyContentCenter
+          ]}
+        >
+          <CustomText
+            style={[
+              GenericStyles.fontSize28,
+              GenericStyles.whiteText,
+              GenericStyles.centerAlignedText
+            ]}
+          >
+            Self Chat
+          </CustomText>
           <CustomImageButton
             source={googleIcon}
             text={'Login with Google'}
-            textStyle={[GenericStyles.whiteText, GenericStyles.centerAlignedText, GenericStyles.fill]}
+            textStyle={[
+              GenericStyles.whiteText,
+              GenericStyles.centerAlignedText,
+              GenericStyles.fill
+            ]}
             style={[styles.whiteBorder, GenericStyles.mt24, styles.p12]}
             imageStyle={styles.googleIcon}
             onPress={onGoogleLoginPress}

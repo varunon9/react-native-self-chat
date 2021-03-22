@@ -1,14 +1,13 @@
 import React from 'react';
 import { SafeAreaView, View } from 'react-native';
 
-import GenericStyles from "../../styles/GenericStyles";
+import GenericStyles from '../../styles/GenericStyles';
 
-import Screens from "../../common/Screens";
-import ErrorBoundary from "../../common/ErrorBoundary";
-import {CustomButton} from "../lib";
+import Screens from '../../common/Screens';
+import ErrorBoundary from '../../common/ErrorBoundary';
+import { CustomButton } from '../lib';
 
 const ChatList = () => {
-
   return (
     <SafeAreaView style={GenericStyles.whiteBackgroundContainer}>
       <ErrorBoundary screenName={Screens.ChatList}>

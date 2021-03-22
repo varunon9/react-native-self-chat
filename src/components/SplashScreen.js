@@ -6,8 +6,8 @@ import { GoogleSignin } from '@react-native-community/google-signin';
 import GenericStyles from '../styles/GenericStyles';
 
 import { CustomActivityIndicator } from './lib';
-import {resetNavigation} from "../utils/navigation";
-import Screens from "../common/Screens";
+import { resetNavigation } from '../utils/navigation';
+import Screens from '../common/Screens';
 
 const SplashScreen = () => {
   useEffect(() => {
@@ -28,7 +28,8 @@ const SplashScreen = () => {
   useEffect(() => {
     // docs: https://rnfirebase.io/auth/social-auth#google
     GoogleSignin.configure({
-      webClientId: '682995426344-iaom49hfdg2u41erafj8m8parctaqgm3.apps.googleusercontent.com',
+      webClientId:
+        '682995426344-iaom49hfdg2u41erafj8m8parctaqgm3.apps.googleusercontent.com'
     });
   }, []);
 

@@ -13,14 +13,21 @@ module.exports = {
         endOfLine: 'auto'
       }
     ],
-    "max-len": [
+    'max-len': [
       1,
       80,
       2,
       {
-        "ignoreComments": true,
-        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$"
+        ignoreComments: true,
+        ignorePattern: '^import\\s.+\\sfrom\\s.+;$'
       }
-    ]
+    ],
+    'no-useless-escape': 'warn',
+    'no-empty': 'warn',
+    'linebreak-style': ['error', 'unix'],
+    semi: ['error', 'always'],
+    'eol-last': 'error',
+    'react-native/no-inline-styles': 'warn',
+    'react-native/no-color-literals': 'warn'
   }
 };

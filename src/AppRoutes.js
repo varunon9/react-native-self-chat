@@ -9,8 +9,8 @@ import Screens from './common/Screens';
 import { canGoBack, goBack } from './utils/navigation';
 import { showToastMessage } from './utils/commonMethods';
 import SplashScreen from './components/SplashScreen';
-import Login from "./components/Login";
-import ChatList from "./components/chat/ChatList";
+import Login from './components/Login';
+import ChatList from './components/chat/ChatList';
 
 const Stack = createStackNavigator();
 

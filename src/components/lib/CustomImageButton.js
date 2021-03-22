@@ -9,7 +9,7 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import GenericStyles from "../../styles/GenericStyles";
+import GenericStyles from '../../styles/GenericStyles';
 
 import CustomText from './CustomText';
 
