@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "682995426344",
+    "project_id": "react-native-self-chat",
+    "storage_bucket": "react-native-self-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682995426344:android:664cd720f35d94b8fe411d",
+        "android_client_info": {
+          "package_name": "me.varunon9.selfchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "682995426344-iaom49hfdg2u41erafj8m8parctaqgm3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.varunon9.selfchat",
+            "certificate_hash": "50fec39f742f3df212bdc2131a99c7d3c82086f6"
+          }
+        },
+        {
+          "client_id": "682995426344-h2fk5paq71v2umcrgt2u178g8jd5nite.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADdcyt5v_28MH_Qr1JN-j6KqLUZMn7U5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "682995426344-h2fk5paq71v2umcrgt2u178g8jd5nite.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

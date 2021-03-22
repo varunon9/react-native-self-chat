@@ -12,6 +12,15 @@ module.exports = {
       {
         endOfLine: 'auto'
       }
+    ],
+    "max-len": [
+      1,
+      80,
+      2,
+      {
+        "ignoreComments": true,
+        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$"
+      }
     ]
   }
 };

@@ -81,6 +81,13 @@ const GenericStyles = StyleSheet.create({
   },
   flexGrow1: {
     flexGrow: 1
+  },
+  whiteBackgroundContainer: {
+    backgroundColor: Colors.WHITE,
+    flex: 1
+  },
+  semiBold: {
+    fontFamily: 'Roboto-Medium'
   }
 });
 

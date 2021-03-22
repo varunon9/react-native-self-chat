@@ -9,6 +9,8 @@ import Screens from './common/Screens';
 import { canGoBack, goBack } from './utils/navigation';
 import { showToastMessage } from './utils/commonMethods';
 import SplashScreen from './components/SplashScreen';
+import Login from "./components/Login";
+import ChatList from "./components/chat/ChatList";
 
 const Stack = createStackNavigator();
 
@@ -48,6 +50,8 @@ const AppRoutes = () => {
       }}
     >
       <Stack.Screen name={Screens.SplashScreen} component={SplashScreen} />
+      <Stack.Screen name={Screens.Login} component={Login} />
+      <Stack.Screen name={Screens.ChatList} component={ChatList} />
     </Stack.Navigator>
   );
 };
