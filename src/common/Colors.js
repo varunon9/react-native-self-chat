@@ -6,7 +6,8 @@ const Colors = {
   LIGHT_BLACK: '#424242',
   WHITE: '#ffffff',
   TRANSPARENT: 'transparent',
-  SEMI_TRANSPARENT: 'rgba(0,0,0,0.5)'
+  SEMI_TRANSPARENT: 'rgba(0,0,0,0.5)',
+  SILVER: '#efefef'
 };
 
 export default Colors;

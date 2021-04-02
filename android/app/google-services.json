@@ -14,11 +14,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "682995426344-iaom49hfdg2u41erafj8m8parctaqgm3.apps.googleusercontent.com",
+          "client_id": "682995426344-uht14ifstkks1ed2l1l4vhun59eqsm05.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "me.varunon9.selfchat",
-            "certificate_hash": "50fec39f742f3df212bdc2131a99c7d3c82086f6"
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
           }
         },
         {

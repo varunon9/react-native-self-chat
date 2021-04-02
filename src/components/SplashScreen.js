@@ -15,6 +15,9 @@ const SplashScreen = () => {
     const subscriber = auth().onAuthStateChanged(user => {
       if (user) {
         // user is logged-in
+        resetNavigation({
+          routes: [{ name: Screens.ChatList }]
+        });
       } else {
         // not logged-in
         resetNavigation({
@@ -27,9 +30,10 @@ const SplashScreen = () => {
 
   useEffect(() => {
     // docs: https://rnfirebase.io/auth/social-auth#google
+    // add web-client-id and not android-client-id
     GoogleSignin.configure({
       webClientId:
-        '682995426344-iaom49hfdg2u41erafj8m8parctaqgm3.apps.googleusercontent.com'
+        '682995426344-h2fk5paq71v2umcrgt2u178g8jd5nite.apps.googleusercontent.com'
     });
   }, []);
 
