@@ -60,7 +60,10 @@ const Login = () => {
                   name: user.displayName,
                   profileUrl: user.photoURL
                 },
-                createdAt: new Date()
+                createdAt: new Date(),
+                lastMessage: {
+                  createdAt: new Date()
+                }
               });
             resetNavigation({
               routes: [{ name: Screens.ChatList }]

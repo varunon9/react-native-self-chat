@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import auth from '@react-native-firebase/auth';
+import firestore from '@react-native-firebase/firestore';
 
 import GenericStyles from '../../styles/GenericStyles';
 
@@ -12,10 +13,34 @@ import {
   NavigationHeader,
   ThreeDotsMenuComponent
 } from '../lib';
-import { resetNavigation } from '../../utils/navigation';
+import { navigateToScreen, resetNavigation } from '../../utils/navigation';
+import { FIRESTORE_COLLECTIONS } from '../../utils/constants';
+import { logErrorWithMessage } from '../../utils/logger';
+import ChatListItem from './ChatListItem';
 
 const ChatList = () => {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [chats, setChats] = useState([]);
+
+  useEffect(() => {
+    const uid = auth().currentUser.uid;
+    firestore()
+      .collection(FIRESTORE_COLLECTIONS.USERS)
+      .doc(uid)
+      .collection(FIRESTORE_COLLECTIONS.CHATS)
+      .orderBy('lastMessage.createdAt')
+      .get()
+      .then(querySnapshot => {
+        const chats = [];
+        querySnapshot.forEach(documentSnapshot => {
+          chats.push({ id: documentSnapshot.id, ...documentSnapshot.data() });
+        });
+        setChats(chats);
+      })
+      .catch(error => {
+        logErrorWithMessage(error.message, 'ChatList.useEffect.firestore');
+      });
+  }, []);
 
   const onMenuToggle = () => {
     setMenuVisible(!menuVisible);
@@ -43,6 +68,15 @@ const ChatList = () => {
     );
   };
 
+  const renderChatMessagesList = ({ item }) => {
+    return (
+      <ChatListItem
+        item={item}
+        onPress={() => navigateToScreen(Screens.ChatDetails, { chat: item })}
+      />
+    );
+  };
+
   const menuItems = [
     {
       visible: true,
@@ -63,6 +97,7 @@ const ChatList = () => {
           onMenuToggle={onMenuToggle}
           RightComponent={renderRightComponent()}
         />
+        <FlatList data={chats} renderItem={renderChatMessagesList} />
         {menuVisible && (
           <ThreeDotsMenuComponent
             onMenuClose={onMenuToggle}

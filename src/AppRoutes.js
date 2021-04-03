@@ -11,6 +11,7 @@ import { showToastMessage } from './utils/commonMethods';
 import SplashScreen from './components/SplashScreen';
 import Login from './components/Login';
 import ChatList from './components/chat/ChatList';
+import ChatDetails from './components/chat/ChatDetails';
 
 const Stack = createStackNavigator();
 
@@ -52,6 +53,7 @@ const AppRoutes = () => {
       <Stack.Screen name={Screens.SplashScreen} component={SplashScreen} />
       <Stack.Screen name={Screens.Login} component={Login} />
       <Stack.Screen name={Screens.ChatList} component={ChatList} />
+      <Stack.Screen name={Screens.ChatDetails} component={ChatDetails} />
     </Stack.Navigator>
   );
 };
