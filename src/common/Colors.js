@@ -7,7 +7,8 @@ const Colors = {
   WHITE: '#ffffff',
   TRANSPARENT: 'transparent',
   SEMI_TRANSPARENT: 'rgba(0,0,0,0.5)',
-  SILVER: '#efefef'
+  SILVER: '#efefef',
+  BLUE: '#3543bf'
 };
 
 export default Colors;

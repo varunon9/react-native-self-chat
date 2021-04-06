@@ -8,11 +8,12 @@ import GenericStyles from '../../styles/GenericStyles';
 import CustomText from './CustomText';
 
 const NavigationHeader = props => {
-  const { title, RightComponent } = props;
+  const { title, RightComponent, LeftComponent } = props;
 
   return (
     <View style={styles.container}>
       <View style={GenericStyles.centerAlignedRow}>
+        {LeftComponent}
         <CustomText numberOfLines={2} style={styles.title}>
           {title}
         </CustomText>
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
 
 NavigationHeader.propTypes = {
   title: PropTypes.string.isRequired,
+  LeftComponent: PropTypes.element,
   RightComponent: PropTypes.element
 };
 

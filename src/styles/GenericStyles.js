@@ -64,6 +64,9 @@ const GenericStyles = StyleSheet.create({
   fontSize20: {
     fontSize: 20
   },
+  fontSize14: {
+    fontSize: 14
+  },
   mt12: {
     marginTop: 12
   },
@@ -86,8 +89,15 @@ const GenericStyles = StyleSheet.create({
     backgroundColor: Colors.WHITE,
     flex: 1
   },
+  silverBackgroundContainer: {
+    backgroundColor: Colors.SILVER,
+    flex: 1
+  },
   semiBold: {
     fontFamily: 'Roboto-Medium'
+  },
+  selfEnd: {
+    alignSelf: 'flex-end'
   }
 });
 

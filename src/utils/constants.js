@@ -3,3 +3,8 @@ export const FIRESTORE_COLLECTIONS = {
   CHATS: 'chats',
   MESSAGES: 'messages'
 };
+
+export const MESSAGE_TYPE = {
+  TEXT: 'text',
+  IMAGE: 'image'
+};
