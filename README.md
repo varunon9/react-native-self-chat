@@ -51,3 +51,7 @@ service cloud.firestore {
   }
 }
 ```
+
+## Screenshots
+
+<img src="./screenshots/chat-list.png" alt="chat-list" width="320" /> <img src="./screenshots/chat-details.png" alt="chat-details" width="320" />

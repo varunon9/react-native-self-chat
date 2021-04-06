@@ -61,20 +61,25 @@ const ChatDetails = ({ route }) => {
 
   const onMessageSubmit = async () => {
     const uid = auth().currentUser.uid;
+    const chatRef = firestore()
+      .collection(FIRESTORE_COLLECTIONS.USERS)
+      .doc(uid)
+      .collection(FIRESTORE_COLLECTIONS.CHATS)
+      .doc(chat.id);
     // post message
     try {
-      await firestore()
-        .collection(FIRESTORE_COLLECTIONS.USERS)
-        .doc(uid)
-        .collection(FIRESTORE_COLLECTIONS.CHATS)
-        .doc(chat.id)
-        .update({
-          lastMessage: {
-            createdAt: new Date(),
-            messageType: MESSAGE_TYPE.TEXT,
-            text: inputMessage
-          }
-        });
+      await chatRef.update({
+        lastMessage: {
+          createdAt: new Date(),
+          messageType: MESSAGE_TYPE.TEXT,
+          text: inputMessage
+        }
+      });
+      await chatRef.collection(FIRESTORE_COLLECTIONS.MESSAGES).add({
+        createdAt: new Date(),
+        messageType: MESSAGE_TYPE.TEXT,
+        text: inputMessage
+      });
       setInputMessage('');
     } catch (error) {
       logErrorWithMessage(error.message, 'ChatDetails.onMessageSubmit');
