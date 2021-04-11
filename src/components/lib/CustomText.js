@@ -21,7 +21,7 @@ const CustomText = props => {
 const styles = StyleSheet.create({
   style: {
     color: Colors.BLACK,
-    fontSize: 18
+    fontSize: 16
   },
   fontFamilyRoboto: {
     fontFamily: 'Roboto'
